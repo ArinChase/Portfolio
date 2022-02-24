@@ -1,0 +1,14 @@
+.icon-list {
+    margin-bottom: 10px;
+    .item {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        gap: 15px;
+        margin-left: 25px;
+        p { font-size: 19px; margin: 0; color: rgb(112, 111, 111); }
+        .icon { font-size: 19px; color: rgba(var(--green-rgb), .8); }
+    }
+}
+
+

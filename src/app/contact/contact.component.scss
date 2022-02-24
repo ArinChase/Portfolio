@@ -1,0 +1,109 @@
+$lightgrey: rgb(197, 195, 195);
+.form-container {
+    width: 100%;
+    text-align: left;
+    .form-wrap {
+        h1, p { margin: 10px 0 10px 0; }
+        h1 {
+            color: grey;
+            font-size: 35px;
+            font-weight: 100;
+        }
+        .form-group {
+            width: 100%;
+            max-width: 500px;
+            margin: 15px 0; 
+            display: block;
+            text-align: left;
+            label {
+               color: grey;
+               font-size: 18px;
+            }
+            .input {
+                margin-top: 5px;
+                box-shadow: 0 0 2px $lightgrey;
+                display: flex;
+                align-items: center;
+                position: relative;
+                input, textarea {
+                    display: inline-block;
+                    font-size: 20px;
+                    color: grey;
+                    width: 80%;
+                    min-width: 250px;
+                    border: none;
+                    padding: 7px;
+                    margin: 1px 5px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                textarea {
+                    height: 200px;
+                    width: 100%;
+                }
+                .icon {
+                    font-size: 20px;
+                    color: grey;
+                    display: inline-block;
+                    margin-left: 10px;
+                    margin-right: 0px;
+                    width: 50px;
+                    text-align: right;
+                }
+                .warning {
+                    font-size: 25px;
+                    color: red;
+                    position: absolute;
+                    right: 20px;
+                }
+            }
+            &:hover .input .icon { color: var(--green); }
+            &:hover label { color: var(--green); }
+            &.invalid { 
+                label { 
+                    //color: red !important; 
+                }
+                .input {
+                    .icon {
+                        //color: red !important;
+                    }
+                }
+            }
+        }
+        button {
+            background: var(--green);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 15px 0;
+            transition: .2s;
+            border: 1px solid var(--green);
+            border-radius: 3px;
+            cursor: pointer;
+            &:hover {
+                background: white;
+                color: var(--green);
+            }   
+            &:disabled {
+                opacity: .4;
+            }
+        }
+        @media screen and (max-width: 1080px) { 
+            .form-group { max-width: 800px; }
+        }
+    }
+    .msg {
+        margin-top: 20px;
+        font-size: 25px;
+        width: 90%;
+        color: rgb(102, 101, 101);
+        padding: 25px;
+        &.success {
+            width: 90%;
+            margin-top: 50px;
+            background: rgba(var(--green-rgb), .2);
+            position: absolute;
+        }
+    }
+}

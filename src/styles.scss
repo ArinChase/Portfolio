@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --green-rgb: 20, 160, 20;
+    --green: rgb(var(--green-rgb));
+}
+
+.highlight { color: var(--green); }
+
+.section {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 28px;
+        color: rgb(100, 99, 99);
+        width: -moz-fit-content;
+        width: fit-content;
+        // workaround for IE11
+        display: table;
+        position: relative;
+        .line {
+            position: absolute;
+            top: -2px;
+            left: -100px;
+            width: calc(100% + 113px);
+            height: 42px;
+            background: rgba(var(--green-rgb), .20);
+            animation: hrAnimation 1s;
+            z-index: -1;
+        }
+    }
+    p {
+        color: grey;
+        font-size: 22px;
+    }
+    @keyframes hrAnimation { 
+        0% { width: 0%; } 
+    }
+}
+
+/* Custom text highgling color */
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: rgba(var(--green-rgb), .2);
+  }
+  
+::selection {
+    color: white;
+    background: rgba(var(--green-rgb), .5);
+}
+

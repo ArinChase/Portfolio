@@ -1,0 +1,33 @@
+<div class="section">
+    <h2><div class="line"></div>contact</h2>
+    <div class="form-container">
+        <div class="form-wrap" *ngIf="!showSuccessMsg && !showErrorMsg">
+            <form id="contact-form" autocomplete="off" [formGroup]="contactForm" (ngSubmit)="submit()">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <div class="input">
+                        <i class="icon fa fa-signature"></i>
+                        <input formControlName="name" type="text" name="name" id="name" required />
+                    </div>  
+                </div>
+                <div class="form-group" [ngClass]="contactForm.get('email')!.touched && contactForm.get('email')!.invalid ? 'invalid' : ''">
+                    <label for="email">Email</label>
+                    <div class="input">
+                        <i class="icon fa fa-envelope"></i>
+                        <input formControlName="email" type="email" name="email" id="email" required />
+                        <p class="warning" *ngIf="contactForm.get('email')!.touched && contactForm.get('email')!.invalid">!</p>
+                    </div>  
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <div class="input">
+                        <textarea formControlName="message" name="message" id="message"></textarea>
+                    </div>
+                </div>
+                <button [disabled]="!contactForm.valid" type="submit" class="btn">Send</button>
+            </form>
+        </div>
+        <div *ngIf="showErrorMsg" class="msg error" id="contact-errorMsg"></div>
+        <h1 *ngIf="showSuccessMsg" class="msg success" id="contact-successMsg">Thanks, <span class="highlight">{{contactForm.value.name}}</span>! I'll try to get back with you as soon as possible.</h1>
+    </div>
+</div>

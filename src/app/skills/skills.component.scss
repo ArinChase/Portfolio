@@ -1,0 +1,39 @@
+.center {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    h3.category {
+        color: rgb(107, 106, 106);
+        text-align: center;
+        padding: 0 0 10px 0;
+        margin: 15px 0 20px 20px;
+        font-size: 22px;
+        text-transform: lowercase;
+        background: linear-gradient(to left, rgb(155, 206, 130), rgb(224, 233, 215) 100%);
+        background-position: 0 100%;
+        background-size: 100% 3px;
+        background-repeat: repeat-x;
+        width: -moz-fit-content;
+        width: fit-content;
+        display: table; // workaround for IE11
+    }
+}
+
+.row {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+    .item {
+        text-align: center;
+        p { font-size: 15px; }
+        .icon { 
+            font-size: 40px !important;
+            width: 60px;
+            margin: 5px 20px 5px 20px;
+            color: var(--green);
+        }
+        &:hover { }
+    }
+}

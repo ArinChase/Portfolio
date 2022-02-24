@@ -2,9 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
-## Development server
+# Getting the project up and running
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ng new PortfolioProject --style=scss --routing --skip-install
+npm i jquery bootstrap font-awesome --save
+npm install
+ng serve --open
+
+# Add bootstrap/jquery/font-awesome to angular.json
+
+"styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/font-awesome/css/font-awesome.css"
+            ],
+"scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/bootstrap.bundle.js"
+            ]
 
 ## Code scaffolding
 
