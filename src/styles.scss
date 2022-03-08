@@ -15,8 +15,7 @@
     flex-direction: column;
     h2 {
         text-align: left;
-        margin-top: 20px;
-        margin-bottom: 15px;
+        margin: 25px 0;
         font-size: 28px;
         color: rgb(100, 99, 99);
         width: -moz-fit-content;
@@ -24,6 +23,7 @@
         // workaround for IE11
         display: table;
         position: relative;
+        .icon { font-size: 20px; margin: 0px 30px 1px -20px;  }
         .line {
             position: absolute;
             top: -2px;
@@ -44,12 +44,26 @@
     }
 }
 
+a {
+    text-decoration: none !important;
+}
+
+.italic { font-style: italic !important; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    background: rgba(var(--green-rgb), .05);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(var(--green-rgb), .15);
+    height: 20px;
+}
+
 /* Custom text highgling color */
 ::-moz-selection { /* Code for Firefox */
     color: black;
     background: rgba(var(--green-rgb), .2);
   }
-  
 ::selection {
     color: white;
     background: rgba(var(--green-rgb), .5);

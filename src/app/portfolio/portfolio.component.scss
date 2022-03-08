@@ -1,8 +1,15 @@
 .projects {
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 0px;
+    margin: auto;
+    justify-content: center;
     .item {
-        max-width: 300px;
+        width: 300px;
         text-align: center;
-        margin: 10px auto;
+        margin: 0;
         padding: 0;
         a {
             padding: 0;
@@ -11,10 +18,18 @@
             img { width: 100%; border: 1px solid rgba(var(--green-rgb), .2); border-bottom: none  }
             h3 { 
                 border: 1px solid rgba(var(--green-rgb), .2); 
+                border-bottom: none;
                 color: rgb(89, 105, 81);
                 padding: 10px 5px; 
                 font-size: 24px; 
                 margin: 0; 
+            }
+            p {
+                border: 1px solid rgba(var(--green-rgb), .2); 
+                font-size: 20px;
+                text-align: left;
+                padding: 10px;
+                height: 200px;
             }
         }
         &:hover {
@@ -27,7 +42,7 @@
         }
         @media screen and (max-width: 1080px) { 
             width: 85%;
-            max-width: 500px;
+            max-width: 300px;
         }
     }
 }

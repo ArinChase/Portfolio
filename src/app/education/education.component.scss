@@ -1,0 +1,30 @@
+.education {
+    list-style: none;
+    padding-bottom: 20px;
+    .item {
+        border-left: 2px solid rgba(var(--green-rgb), .5);
+        padding: 10px 20px;
+        position: relative;
+        .bullet {
+            width: 11px;
+            height: 11px;
+            position: absolute;
+            background: rgba(var(--green-rgb), .9);
+            border-radius: 50px;
+            left: -6px;
+            top: 17px;
+        }
+        .date {
+            font-size: 20px;
+            color: var(--green);
+        }
+        ul {
+            list-style: none;
+            li:before {
+                content: "\00BB \0020";
+                color: var(--green);
+                font-size: 20px;
+            }
+        }
+    }
+}
