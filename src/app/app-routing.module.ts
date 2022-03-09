@@ -7,13 +7,13 @@ import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
+  { path:'', component: AboutComponent },
   { path:'about', component:AboutComponent },
   { path:'skills', component:SkillsComponent} ,
   { path:'portfolio', component:PortfolioComponent },
   { path:'education', component:EducationComponent },
   { path:'contact', component: ContactComponent},
-  { path:'', redirectTo:'about', pathMatch:'full' },
-  { path:'**', redirectTo: 'about' }
+  { path:'**', redirectTo: '' }
 ];
 
 @NgModule({
