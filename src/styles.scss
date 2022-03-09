@@ -23,7 +23,13 @@
         // workaround for IE11
         display: table;
         position: relative;
-        .icon { font-size: 20px; margin: 0px 30px 1px -20px;  }
+        .icon { 
+            font-size: 20px; 
+            margin: 0px 30px 1px -30px;  
+            @media screen and (max-width: 1080px) { 
+                margin-left: -10px;
+            }
+        }
         .line {
             position: absolute;
             top: -2px;
