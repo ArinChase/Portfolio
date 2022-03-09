@@ -32,7 +32,7 @@
             height: 42px;
             background: rgba(var(--green-rgb), .20);
             animation: hrAnimation 1s;
-            z-index: -1;
+            z-index: 2;
         }
     }
     p {
@@ -46,9 +46,15 @@
 
 a {
     text-decoration: none !important;
+    &:focus, &:active, &:visited { outline: none !important; }
 }
 
+a, input, textarea, div { pointer-events: auto !important; }
+
 .italic { font-style: italic !important; }
+
+/* Remove highlighting on mobile */
+* { -webkit-tap-highlight-color: transparent !important; }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
