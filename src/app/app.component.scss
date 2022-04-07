@@ -156,11 +156,11 @@
         animation: profileBg 1s;
     }
     img {
-        width: 200px;
+        width: 210px;
         border-radius: 100px;
         margin: auto;
         height: auto;
-        filter:grayscale(1);
+        //filter:grayscale(1);
         margin-top: -100px;
         margin-bottom: 10px;
         position: absolute;
@@ -171,8 +171,7 @@
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         animation: profileImg 1.2s;
         &:hover {
-            width: 210px;
-            border-radius: 200px;
+            width: 215px;
             box-shadow: rgba(163, 165, 163, 0.753) 2px 7px 29px 0px;
         }
     }
